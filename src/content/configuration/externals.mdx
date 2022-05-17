@@ -377,7 +377,7 @@ module.exports = {
 
 ### externalsType.node-commonjs
 
-将 externals 类型设置为 `'node-commonjs'`， 它告诉 Webpack 在 module 中为外部引用引入`'module'`的 [`createRequire`](https://nodejs.org/api/module.html#module_module_createrequire_filename) 函数构造一个require函数
+将 externals 类型设置为 `'node-commonjs'`，webpack 将从 `module` 中导入 `createRequire` 来构造一个 require 函数，用于加载模块中使用的外部对象。
 
 ```js
 module.export = {
